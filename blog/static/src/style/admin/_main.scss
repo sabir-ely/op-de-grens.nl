@@ -1,0 +1,152 @@
+main#admin_main_page{
+
+    min-width: 700px;
+    max-width: 980px;
+    margin: 0 auto;
+
+
+    .remove_message{
+        float: right;
+        position: relative;
+        top: 11px;
+        right: 8px;
+    }
+
+    .remove_message:hover{
+        cursor: pointer;
+    }
+
+    h1{
+        margin-top: 20px;
+        margin-bottom: 20px;
+        text-align: center;
+    }
+
+    .underlined{
+        border-bottom: solid 1px;
+        border-color: gray;
+    }
+
+    .hidden{
+        display: none;
+    }
+
+    #section_menu{
+        margin: 0 auto;
+        text-align: center;
+        margin-bottom: 50px;
+        font-size: 20px;
+
+        -moz-user-select: -moz-none;
+        -khtml-user-select: none;
+        -webkit-user-select: none;
+        -o-user-select: none;
+        user-select: none;
+
+        ul{
+            padding: 0;
+        }
+
+        li:hover {
+            cursor: pointer;
+        }
+
+        a{
+            text-decoration: none;
+        }
+
+    }
+
+    .flash_message{
+        //color: #154cb2;
+        background-color: #99ff99;
+        list-style-type: none;
+        border: solid 2px;
+        border-radius: 5px;
+        border-color: #33ff33;
+        margin: 0 auto;
+        padding: 0;
+        width: 250px;
+        height: 40px;
+        line-height: 40px;
+        text-align: center;
+
+    }
+
+    section{
+        text-align: center;
+
+
+        #new_article_button, #edit_description_button{
+            width: 40%;
+            margin-bottom: 30px;
+            text-align: center;
+        }
+
+        #description_text{
+            width: 60%;
+            margin: 0 auto;
+            text-align: left;
+        }
+
+        #article_search{
+            margin: 0 auto;
+            display: block;
+            margin-bottom: 10px;
+            //min-width: 525px;
+            width: 75%;
+            height: 30px;
+            padding-left: 2%;
+            padding-right: 2%;
+        }
+
+
+        table{
+            margin: 0 auto;
+            width: 80%;
+            min-width: 614px;
+            text-align: center;
+
+            th{
+                text-align: center;
+            }
+
+            tr.article_item{
+
+                td{
+                    .article_button{
+                        width: 10px;
+                        text-align: center;
+                    }
+
+                    .article_title{
+                        width: 70%;
+                        max-width: 100px;
+                        text-align: left;
+                        overflow: auto;
+                    }
+
+                    .article_date_created{
+                        width: 10%;
+                    }
+
+                    .article_public{
+                        width: 5%;
+                    }
+
+                    .fa-times{
+                        color: red;
+                    }
+
+                    .fa-check{
+                        color: green;
+                    }
+
+                    .fa-trash{
+                        color: red;
+                    }
+                }
+            }
+        }
+    }
+}

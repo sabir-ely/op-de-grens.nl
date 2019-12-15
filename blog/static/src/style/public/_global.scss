@@ -1,0 +1,54 @@
+@import "../constants";
+
+html{
+    font-family: $main_font, sans-serif;
+    min-width: 320px;
+    padding-bottom: 50px;
+    background-color: $main_bg_color;
+    color: $main_font_color;
+
+    //@media screen and (min-width: 360px){
+    //    color: red;
+    //}
+}
+
+body{
+    line-height: 1.7;
+    margin : 0 auto;
+    margin-top: 0;
+    margin-bottom: 0;
+    //width: 100%;
+}
+
+
+main{
+    margin: 0 auto;
+}
+
+p{
+    font-size: 18px;
+    word-wrap: break-word;
+
+    //@media screen and (max-width: 600px){
+    //    font-size: 22px;
+    //}
+
+    img{
+        width: 70%;
+        display: inline-block;
+        margin: 0 auto;
+        margin-top: 20px;
+        margin-bottom: 20px;
+    }
+}
+
+a{
+    color: #6484ba;
+}
+
+
+.date_created{
+    color: $light_font_color;
+    font-style: italic;
+    text-align: center;
+}

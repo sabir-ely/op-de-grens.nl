@@ -1,0 +1,70 @@
+main#text_editor{
+
+    width: 60%;
+    min-width: 700px;
+
+    a#back_button{
+        margin: 20px;
+    }
+
+    h1, h2{
+        margin: 0;
+        text-align: center;
+    }
+
+    #article_title_entry{
+        margin: 0 auto;
+    }
+
+    #article_title_entry input{
+        display: block;
+        width: 80%;
+        height: 30px;
+        margin: 0 auto;
+        margin-bottom: 20px;
+        padding-left: 2%;
+        padding-right: 2%;
+        font-weight: bold;
+    }
+
+    form{
+        display: inline;
+        margin: 0 auto;
+        margin-left: 5px;
+        margin-right: 5px;
+    }
+
+
+    .CodeMirror{
+        height: 400px;
+    }
+
+    #article_public_entry{
+        text-align: center;
+        margin-top: 20px;
+    }
+
+    #article_public_entry label{
+        position: relative;
+        bottom: 5px;
+    }
+
+    #submit_button{
+        display: block;
+        width: 25%;
+        margin: 0 auto;
+        text-align: center;
+        margin-top: 15px;
+    }
+
+    #article_public{
+        height: 20px;
+        width: 20px;
+    }
+
+
+    .error_message{
+        color: red;
+        text-align: center;
+    }
+}

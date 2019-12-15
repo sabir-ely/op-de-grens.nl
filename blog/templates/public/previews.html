@@ -1,0 +1,14 @@
+<ul class="article_list">
+    {% for article in articles %}
+        <li class="article_preview">
+        	<h4>{{article.title}}</h4>
+                <div class="date_created">{{ article.date_created }}</div>
+                <div class="preview_text">
+                    {{ article.preview_text | markdown }}
+                </div>
+                <a class="article_link" href="{{url_for("article", id=article.id, slug=slugify(article.title))}}">
+                    Meer lezen
+                </a>
+        </li>
+    {% endfor %}
+</ul>

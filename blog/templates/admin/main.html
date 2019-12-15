@@ -1,0 +1,58 @@
+{% extends "base.html" %}
+{% block title %}
+Beheerder
+{% endblock %}
+{% block main %}
+<main id="admin_main_page">
+    <h1>Beheerder</h1>
+    {% with messages = get_flashed_messages() %}
+    {% if messages %}
+    <ul class=flashes>
+        {% for message in messages %}
+        <li class="flash_message">
+            {{ message }} <i class="fa fa-times remove_message"></i>
+        </li>
+        {% endfor %}
+    </ul>
+    {% endif %}
+    {% endwith %}
+    <div id="section_menu" class="pure-menu pure-menu-horizontal">
+        <ul class="pure-menu-list">
+            <li id="article_menu_button" class="pure-menu-item underlined">
+                <div class="pure-menu-link">Artikelen</div>
+            </li>
+            <li id="description_menu_button" class="pure-menu-item">
+                <div class="pure-menu-link">Omschrijving</div>
+            </li>
+        </ul>
+    </div>
+    <section id="edit_description" class="hidden">
+        <a class="pure-button" id="edit_description_button" href="{{url_for('edit_description')}}">
+            Omschrijving aanpassen
+        </a>
+        <div id="description_text">
+            {{ description | markdown }}
+        </div>
+    </section>
+    <section id="edit_articles">
+        <a class="pure-button" id="new_article_button" href="{{url_for('add_article')}}">
+                Nieuw artikel schrijven
+        </a>
+        <input type="text" id="article_search" placeholder="Zoeken op titel...">
+        <table id="article_table" class="pure-table pure-table-bordered pure-table-horizontal pure-table-odd">
+            <thead>
+                <tr>
+                    <th>Titel</th>
+                    <th>Gepubliceerd</th>
+                    <th>Openbaar</th>
+                    <th></th>
+                    <th></th>
+                    <th></th>
+                </tr>
+            </thead>
+            <tbody>
+            </tbody>
+        </table>
+    </section>
+</main>
+{% endblock %}

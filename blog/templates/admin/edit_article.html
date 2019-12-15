@@ -1,0 +1,62 @@
+{% extends "admin/text_editor.html" %}
+{% block title %}
+    {% if new %}
+        Nieuw artikel
+    {% else %}
+        Artikel bewerken
+    {% endif %}
+{% endblock %}
+{% block heading %}
+    {% if new %}
+        Nieuw artikel
+    {% else %}
+        Artikel bewerken
+    {% endif %}
+{% endblock %}
+{% block inputs %}
+    {% if errors and errors.get("title") %}
+        <div id="error_title" class="error_message">
+            {{ errors["title"] }}
+        </div>
+    {% endif %}
+    </div>
+    {% if errors and errors.get("content") %}
+        <div id="error_content" class="error_message">
+            {{ errors["content"] }}
+        </div>
+    {% endif %}
+    <div id="article_title_entry" class="form_entry">
+        <input
+            id="article_title"
+            name="article_title"
+            type="text"
+            placeholder="Titel"
+        {% if article %}
+            value="{{article.title}}"
+        {% endif %}
+        />
+    </div>
+    <textarea
+        id="markdown_editor"
+        name="article_content"
+        placeholder="Hier komt jouw verhaal :)"
+        >{% if article %}{{ article.content }}{% endif %}</textarea>
+    <div id="article_public_entry" class="form_entry">
+        <label for="article_public">Openbaar</label>
+        <input
+            id="article_public"
+            name="article_public"
+            type="checkbox"
+            {% if not article or article.public %}
+                checked
+            {% endif %}
+        />
+    </div>
+{% endblock %}
+{% block button_text %}
+    {% if new %}
+        Publiceren
+    {% else %}
+        {{ super() }}
+    {% endif %}
+{% endblock %}

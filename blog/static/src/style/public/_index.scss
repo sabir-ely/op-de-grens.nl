@@ -1,0 +1,42 @@
+@import "../constants";
+
+main#index{
+    width: 90%;
+    margin-top: 30px;
+
+    h2{
+        text-align: center;
+        font-size: 28px;
+    }
+
+    aside{
+        margin: 0 auto;
+        margin-bottom: 20px;
+        max-width: 600px;
+
+        p{
+            font-size: 17px;
+        }
+
+
+
+    }
+
+    a#browse_link{
+        width: 80%;
+        display: block;
+        text-align: center;
+        margin: 0 auto;
+        margin-top: 40px;
+    }
+
+    #instagram_widget{
+        border:none;
+        width: 100%;
+        height: 500px;
+        margin: 0 auto;
+        text-align: center;
+        max-width: 100%;
+    }
+
+}

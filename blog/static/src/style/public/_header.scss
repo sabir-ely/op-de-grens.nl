@@ -1,0 +1,25 @@
+@import "../constants";
+
+
+header{
+    $header_height: 220px;
+    height: $header_height;
+    border-bottom: 1px solid #eee;
+
+
+    #header_image{
+        width: auto;
+        max-width: 500px;
+        height: $header_height - 10px;
+        background-image: url("/static/images/header_image.jpg");
+        background-size: 100% 100%;
+        background-repeat: no-repeat;
+        margin: 0 auto;
+        margin-top: 5px;
+        margin-bottom: 5px;
+    }
+
+    #header_image:hover{
+        cursor: pointer;
+    }
+}

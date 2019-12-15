@@ -1,0 +1,11 @@
+{% extends "admin/text_editor.html" %}
+{% block title %}
+	Omschrijving aanpassen
+{% endblock %}
+{% block heading %}
+	Omschrijving aanpassen
+{% endblock %}
+{% block method %}POST{% endblock %}
+{% block inputs %}
+	<textarea id="markdown_editor" name="description_text">{{ description }}</textarea>
+{% endblock %}

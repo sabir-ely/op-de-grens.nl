@@ -1,0 +1,17 @@
+{% extends "base.html" %}
+{% block main %}
+<main id="text_editor">
+    <a id="back_button" class="pure-button" href="{{url_for("admin_main")}}">
+        <i class="fa fa-arrow-left" aria-hidden="true"></i>
+        Terug naar Beheerderpagina
+    </a>
+    <h2>{% block heading %}{% endblock %}</h2>
+    <form method="POST">
+        <input type="hidden" name="_csrf_token" value="{{ csrf_token() }}">
+        {% block inputs %}{% endblock %}
+        <button id="submit_button" class="pure-button" type="submit">
+            {% block button_text %}Bewerken{% endblock %}
+        </button>
+    </form>
+</main>
+{% endblock %}

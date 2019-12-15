@@ -1,0 +1,24 @@
+{
+  "name": "op-de-grens.nl",
+  "repository": {
+    "type": "git",
+    "url": "https://git.sabirelyahiaoui.nl/saelyah/blog-flask.git"
+  },
+  "dependencies": {},
+  "devDependencies": {
+    "@types/node": "^7.0.28",
+    "classlist-polyfill": "^1.2.0",
+    "css-loader": "^0.28.4",
+    "input-placeholder-polyfill": "^1.0.0",
+    "node-sass": "^4.5.3",
+    "promise-polyfill": "^6.0.2",
+    "purecss": "^1.0.0",
+    "sass-loader": "^6.0.6",
+    "simplemde": "^1.11.2",
+    "style-loader": "^0.18.2",
+    "ts-loader": "^2.1.0",
+    "typescript": "^2.3.4",
+    "uglifyjs-webpack-plugin": "^0.4.3",
+    "webpack": "^2.6.1"
+  }
+}
